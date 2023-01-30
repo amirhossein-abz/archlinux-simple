@@ -117,48 +117,65 @@ fdisk /dev/sda
 `mkswap /swapfile` &nbsp;&nbsp;&nbsp;&nbsp; making swap file
 
 `swapon /swapfile` &nbsp;&nbsp;&nbsp;&nbsp; Turning swap on
+
 <br><br>
+
 `vim /etc/fstab` &nbsp;&nbsp;&nbsp;&nbsp;  Adding swap to fstab
+
 ###### add following line to end of /etc/fstab
+
 `/swapfile none swap 0 0`
 
 ---
 <br>
 
 #### Time
+
 `ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime` &nbsp;&nbsp;&nbsp;&nbsp; Changing time
+
 `hwclock --systohc` &nbsp;&nbsp;&nbsp;&nbsp; Syncing hardware time
 
 ---
 <br>
 
 #### Locale
+
 `vim /etc/locale.gen`
+
 ###### uncommnet `#en_US.UTF-8 UTF-8` from `/etc/locale.gen`
+
 `locale-gen` &nbsp;&nbsp;&nbsp;&nbsp; Generating Locale File
+
 <br><br><br>
 
 `vim /etc/locale.conf` &nbsp;&nbsp;&nbsp;&nbsp;  Adding Lang to Locale
+
 ###### Add `LANG=en_US.UTF-8` to `/etc/locale.conf`
 
 ---
 <br>
 
 #### Host
+
 `vim /etc/hostname` Name for PC
+
 ###### add `arch` to `/etc/hostname`
+
 <br><br><br>
 
 `vim /etc/hosts` &nbsp;&nbsp;&nbsp;&nbsp; Adding hosts
 
 ###### add `127.0.0.1            localhost` to `/etc/hosts`
+
 ###### add ```::1            localhost``` to `/etc/hosts`
+
 ###### add `127.0.1.1            arch.localdomain arch` to `/etc/hosts`
 
 ---
 <br>
 
 ### Root
+
 `passwd`  &nbsp;&nbsp;&nbsp;&nbsp;  Changing Root Password
 
 ---
@@ -166,7 +183,9 @@ fdisk /dev/sda
 
 #### Grub
 `pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel linux-headers` &nbsp;&nbsp;&nbsp;&nbsp;    Then Accept defualts
+
 <br><br>
+
 `grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB`  &nbsp;&nbsp;&nbsp;&nbsp;  Installing grub
 
 `grub-mkconfig -o /boot/grub/grub.cfg`  &nbsp;&nbsp;&nbsp;&nbsp;  creating grub config
