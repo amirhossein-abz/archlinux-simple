@@ -188,6 +188,8 @@ fdisk /dev/sda
 
 `grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB`  &nbsp;&nbsp;&nbsp;&nbsp;  Installing grub
 
+##### If Getting error on above command try : `grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --no-nvram --removale`
+
 `grub-mkconfig -o /boot/grub/grub.cfg`  &nbsp;&nbsp;&nbsp;&nbsp;  creating grub config
 
 ---
