@@ -110,7 +110,7 @@ fdisk /dev/sda
 <br>
 
 #### Makeing Swap File
-`fallocate -l 2GB /swapfile` &nbsp;&nbsp;&nbsp;&nbsp; Making Swap File (2GB is Enaugh)
+`fallocate -l 2GB /swapfile` &nbsp;&nbsp;&nbsp;&nbsp; Making Swap File (RAM Size or 2*RAM size for swap)
 
 `chmod 600 /swapfile` &nbsp;&nbsp;&nbsp;&nbsp; Changing swapfile perm
 
