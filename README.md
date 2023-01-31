@@ -4,7 +4,7 @@
 
 ```sh
 ip a
-ping archlinux.com
+ping archlinux.org
 ```
 ---
 <br>
